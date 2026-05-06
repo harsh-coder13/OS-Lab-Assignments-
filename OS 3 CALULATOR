@@ -1,0 +1,43 @@
+OS 3
+
+//CALULATOR
+#!/bin/bash
+echo "Enter first number:"
+read num1
+echo "Enter second number:"
+read num2
+echo "Choose operation: +  -  *  /"
+read op
+case $op in
+    +) result=$((num1 + num2))
+       echo "Result: $result" ;;
+    -) result=$((num1 - num2))
+       echo "Result: $result" ;;
+    \*) result=$((num1 * num2))
+        echo "Result: $result" ;;
+    /) result=$((num1 / num2))
+       echo "Result: $result" ;;
+    *) echo "Invalid operation" ;;
+esac
+
+or
+
+#!/bin/bash
+echo "Enter first number:"
+read a
+echo "Enter operator (+ - * /):"
+read op
+echo "Enter second number:"
+read b
+case $op in
+  +) result=$(echo "$a + $b" | bc) ;;
+  -) result=$(echo "$a - $b" | bc) ;;
+  \*) result=$(echo "$a * $b" | bc) ;;
+  /) result=$(echo "scale=2; $a / $b" | bc) ;;
+  *) echo "Invalid operator"; exit 1 ;;
+esac
+echo "Result: $result" 
+
+//  chmod +x calculator.sh 
+   ./calculator.sh
+
