@@ -1,0 +1,32 @@
+OS AS 2 
+THEORY:
+echo- Displays a line of text. Useful for scripts and seeing the value of variables. echo "Hello World"
+whoami- Displays the current effective username. whoami
+uname-  Prints system information (kernel name, network hostname, etc.).uname -a (for all info)
+man- Formats and displays the on-line manual pages for commands.
+clear- Clears the terminal screen. 
+exit-  Exits the shell session.
+ls- Lists directory contents. ls -l (long format)
+cd- Changes the current working directory. cd /home/user/documents
+pwd- Prints the name of the current working directory. pwd
+mkdir- Makes (creates) new directories. mkdir new_folder
+rmdir- Removes empty directories (use rm -r for non empty ones).rmdir empty_folder
+touch- Creates a new empty file or updates the timestamp of an existing one. touch new_file.txt
+cp- Copies files or directories. cp file1.txt /tmp/file1.txt
+mv- Moves (renames) files or directories. mv old_name.txt new_name.txt
+Rm- Removes (deletes) files or directories. rm file_to_delete.txt
+Cat- Concatenates and displays the content of files. cat file.txt
+less/more- Displays file contents one page at a time for interactive viewing.ess large_log.txt
+ps- Reports a snapshot of the current processes. ps aux (shows all processes for all users)
+top/htop-  Display a dynamic, real-time list of running processes and resource usage. top
+kill- Sends a signal (usually to terminate) a process by its Process ID (PID).kill 12345
+jobs- Lists active jobs in the current shell. jobs
+&- Runs a command in the background (used when launching a program).sleep 60 &
+grep- Searches for a specific text pattern withinfiles or command output.grep "error" /var/log/syslog
+awk- A powerful pattern scanning and text processing language.awk '{print $1}' file.txt (prints first column)
+sed- A stream editor for filtering and transforming text.sed 's/old_text/new_text/g' file.txt (replace text)
+cut- Removes sections from lines of files (e.g., specific columns).cut -d',' -f1 file.csv (cut by comma delimiter, first field)
+sort- Sorts lines of text files. sort names.txt
+uniq- Reports or filters out repeated lines in a sorted file.sort file.txt | uniq
+wc- Prints the newline, word, and byte countsfor files.wc -l file.txt (lines only)
+|- Connects the output of one command to the input of another.ls -l | grep "Jan"
